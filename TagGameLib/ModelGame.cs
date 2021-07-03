@@ -17,6 +17,8 @@ namespace TagGameLib
         private readonly int[,] _map = new int[4, 4];
 
         public event EventHandler<int[,]> RePaint;
+        
+        public event EventHandler WinComplete;
 
         public int Step { get; private set; }
         
@@ -154,26 +156,43 @@ namespace TagGameLib
             {
                 if (emt.c < pos.c)
                 {
-                    ToLeft();
+                    for (int i = emt.c; i < pos.c; i++)
+                    {
+                        ToLeft();
+                    }
                 }
                 else
                 {
-                    ToRight();
+                    for (int i = emt.c; i > pos.c; i--)
+                    {
+                        ToRight();
+                    }
                 }
             }
             else if (emt.c == pos.c)
             {
                 if (emt.r < pos.r)
                 {
-                    ToUp();
+                    for (int i = emt.r; i < pos.r; i++)
+                    {
+                        ToUp();
+                    }
                 }
                 else
                 {
-                    ToDown();
+                    for (int i = emt.r; i > pos.r; i--)
+                    {
+                        ToDown();
+                    }
                 }
             }
 
-            RePaint(this, _map);
+            RePaint?.Invoke(this, _map);
+
+            if (Win())
+            {
+                WinComplete?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }
