@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="600" Width="600">
+    <Window.Resources>
+        <local:DateTimeToDateConverter x:Key="cnv"/>
+    </Window.Resources>
     <Grid>
-        
+        <!--<Viewbox>-->
+            <ItemsControl x:Name="ic" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="50">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <ItemsControl ItemsSource="{Binding}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Padding="20" Margin="3" BorderThickness="2"
+                                            BorderBrush="Silver" Background="#EEE" Width="100" Height="100"
+                                            CornerRadius="10" Opacity="{Binding Converter={StaticResource cnv}}"
+                                            MouseDown="Border_MouseDown">
+                                        <Border.BitmapEffect>
+                                            <DropShadowBitmapEffect ShadowDepth="5" Opacity="0.2"></DropShadowBitmapEffect>
+                                        </Border.BitmapEffect>
+                                        <TextBlock Text="{Binding}" FontSize="40" HorizontalAlignment="Center"
+                                                   Foreground="#444" FontWeight="Bold">
+                                            <TextBlock.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="4" Opacity="0.5"></DropShadowBitmapEffect>
+                                            </TextBlock.BitmapEffect>
+                                        </TextBlock>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        <!--</Viewbox>-->
     </Grid>
 </Window>

@@ -71,13 +71,13 @@ namespace TagGameLib
             return true;
         }
 
-        private (int, int) FindSpace()
+        private (int r, int c) FindSpace(int num = 0)
         {
             for (var i = 0; i < 4; i++)
             {
                 for (var j = 0; j < 4; j++)
                 {
-                    if (_map[i, j] == 0)
+                    if (_map[i, j] == num)
                     {
                         return (i, j);
                     }
@@ -144,6 +144,36 @@ namespace TagGameLib
             }
 
             RePaint?.Invoke(this, _map);
+        }
+
+        public void Press(int num)
+        {
+            var emt = FindSpace();
+            var pos = FindSpace(num);
+            if (emt.r == pos.r)
+            {
+                if (emt.c < pos.c)
+                {
+                    ToLeft();
+                }
+                else
+                {
+                    ToRight();
+                }
+            }
+            else if (emt.c == pos.c)
+            {
+                if (emt.r < pos.r)
+                {
+                    ToUp();
+                }
+                else
+                {
+                    ToDown();
+                }
+            }
+
+            RePaint(this, _map);
         }
     }
 }

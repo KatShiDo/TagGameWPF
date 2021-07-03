@@ -1,0 +1,6 @@
+D:\Projects\github\TagGameWPF\TagGameLib\bin\Debug\TagGameLib.dll
+D:\Projects\github\TagGameWPF\TagGameLib\bin\Debug\TagGameLib.pdb
+D:\Projects\github\TagGameWPF\TagGameLib\obj\Debug\TagGameLib.csprojAssemblyReference.cache
+D:\Projects\github\TagGameWPF\TagGameLib\obj\Debug\TagGameLib.csproj.CoreCompileInputs.cache
+D:\Projects\github\TagGameWPF\TagGameLib\obj\Debug\TagGameLib.dll
+D:\Projects\github\TagGameWPF\TagGameLib\obj\Debug\TagGameLib.pdb
