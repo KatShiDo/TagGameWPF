@@ -1,0 +1,15 @@
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.csprojAssemblyReference.cache
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\MainWindow.g.cs
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\App.g.cs
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM_MarkupCompile.cache
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM_MarkupCompile.lref
+D:\Projects\github\TagGameWPF\TagGameMVVM\bin\Debug\TagGameMVVM.exe.config
+D:\Projects\github\TagGameWPF\TagGameMVVM\bin\Debug\TagGameMVVM.exe
+D:\Projects\github\TagGameWPF\TagGameMVVM\bin\Debug\TagGameMVVM.pdb
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\MainWindow.baml
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.g.resources
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.Properties.Resources.resources
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.csproj.GenerateResource.cache
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.csproj.CoreCompileInputs.cache
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.exe
+D:\Projects\github\TagGameWPF\TagGameMVVM\obj\Debug\TagGameMVVM.pdb

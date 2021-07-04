@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagGameLib", "TagGameLib\Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{12CDD26F-D3BE-48A1-8D5E-4AD0A4684DCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagGameMVVM", "TagGameMVVM\TagGameMVVM.csproj", "{48E014FD-80A8-4A90-902C-76BE7CF478A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{12CDD26F-D3BE-48A1-8D5E-4AD0A4684DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12CDD26F-D3BE-48A1-8D5E-4AD0A4684DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12CDD26F-D3BE-48A1-8D5E-4AD0A4684DCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E014FD-80A8-4A90-902C-76BE7CF478A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E014FD-80A8-4A90-902C-76BE7CF478A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E014FD-80A8-4A90-902C-76BE7CF478A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E014FD-80A8-4A90-902C-76BE7CF478A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
