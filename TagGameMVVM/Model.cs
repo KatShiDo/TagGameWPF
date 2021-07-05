@@ -19,7 +19,7 @@ namespace TagGameMVVM
         private int step;
         private string timer;
 
-        private (int r, int c) space; 
+        private (int r, int c) space;
 
         private Piece[] _pieces;
         //private ObservableCollection<Piece> _pieces = new ObservableCollection<Piece>();
@@ -29,11 +29,7 @@ namespace TagGameMVVM
         public Piece[] pieces => _pieces;
         //public ObservableCollection<Piece> pieces => _pieces;
 
-        public int Step
-        {
-            get => step;
-            private set => Set(ref step, value);
-        }
+        public int Step => step;
 
         public event EventHandler WinComplete;
 
@@ -55,12 +51,12 @@ namespace TagGameMVVM
 
             space = (3, 3);
             Mix();
-            Step = 0;
+            step = 0;
         }
 
         private void Mix()
         {
-            for (var i = 0; i < 100; i++)
+            for (var i = 0; i < 5 /*100*/; i++)
             {
                 switch (_rnd.Next(2) + i % 2 * 2)
                 {
@@ -121,13 +117,29 @@ namespace TagGameMVVM
             return p;
         }
 
-        public void ToLeft() => MoveFrom(space.r, space.c + 1)?.ToLeft();
+        public void ToLeft()
+        { 
+            MoveFrom(space.r, space.c + 1)?.ToLeft(ref step);
+            Fire(nameof(Step));
+        }
 
-        public void ToRight() => MoveFrom(space.r, space.c - 1)?.ToRight();
+        public void ToRight()
+        {
+            MoveFrom(space.r, space.c - 1)?.ToRight(ref step);
+            Fire(nameof(Step));
+        }
 
-        public void ToUp() => MoveFrom(space.r + 1, space.c)?.ToUp();
+        public void ToUp()
+        {
+            MoveFrom(space.r + 1, space.c)?.ToUp(ref step);
+            Fire(nameof(Step));
+        }
 
-        public void ToDown() => MoveFrom(space.r - 1, space.c)?.ToDown();
+        public void ToDown()
+        {
+            MoveFrom(space.r - 1, space.c)?.ToDown(ref step);
+            Fire(nameof(Step));
+        }
 
         public void PressBy(Piece piece)
         {
@@ -145,39 +157,43 @@ namespace TagGameMVVM
         public int X => c * 110;
         public int Y => r * 110;
 
-        public void ToDown()
+        public void ToDown(ref int step)
         {
             if (r < 3)
             {
                 r++;
                 Fire(nameof(Y));
+                step++;
             }
         }
 
-        public void ToUp()
+        public void ToUp(ref int step)
         {
             if (r > 0)
             {
                 r--;
                 Fire(nameof(Y));
+                step++;
             }
         }
 
-        public void ToRight()
+        public void ToRight(ref int step)
         {
             if (c < 3)
             {
                 c++;
                 Fire(nameof(X));
+                step++;
             }
         }
 
-        public void ToLeft()
+        public void ToLeft(ref int step)
         {
             if (c > 0)
             {
                 c--;
                 Fire(nameof(X));
+                step++;
             }
         }
         

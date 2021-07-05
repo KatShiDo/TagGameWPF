@@ -42,7 +42,7 @@
                                 </BeginStoryboard>
                             </EventTrigger>
                             
-                            <EventTrigger RoutedEvent="Border.MouseDown">
+                            <EventTrigger RoutedEvent="Border.Loaded">
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="ttBrd"
